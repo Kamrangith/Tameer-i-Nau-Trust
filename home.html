@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Academics</a></li>
+      <li><a href="#">Activities</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Alumni Registration</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Tameer-i-Nau Trust Balochistan<br>Quetta</h1>
+    <p>Click here to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+    <a href="#" class="cta-button">Our Academics</a>
+  </div>
+  <div class="hexagon-grid">
+    <!-- Hexagon Items -->
+    <div class="hex"><img src="https://th.bing.com/th/id/OIP.XsL5y51PPmVZ455Cv2jx-AAAAA?rs=1&pid=ImgDetMain" alt="School 1" /></div>
+    <div class="hex"><img src="https://i.ytimg.com/vi/z67YMH1sNIU/maxresdefault_live.jpg" alt="School 2" /></div>
+    <div class="hex"><img src="https://th.bing.com/th/id/OIP.XsL5y51PPmVZ455Cv2jx-AAAAA?rs=1&pid=ImgDetMain" alt="School 3" /></div>
+    <div class="hex"><img src="https://th.bing.com/th/id/OIP.FLLlzk20txIT2kGhNjuFpwHaHd?rs=1&pid=ImgDetMain" alt="School 4" /></div>
+        <div class="hex"><img src="https://play-lh.googleusercontent.com/4Ih3juemZ_BTm1N5oJNpZYSPDRBCmuIRM8GyoMxSZKU6jPvq2ZQKCsa4_Rhpha4VQw" alt="School 6" /></div>
+
+    <div class="hex"><img src="https://th.bing.com/th/id/OIP.JBDK_c95V9HmbAVoq-5wWAHaFj?pid=ImgDet&w=474&h=355&rs=1" alt="School 5" /></div>
+    <div class="hex"><img src="https://play-lh.googleusercontent.com/4Ih3juemZ_BTm1N5oJNpZYSPDRBCmuIRM8GyoMxSZKU6jPvq2ZQKCsa4_Rhpha4VQw" alt="School 6" /></div>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+
+</body>
+</html>
