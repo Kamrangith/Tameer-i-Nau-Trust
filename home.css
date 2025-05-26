@@ -216,4 +216,312 @@ body {
 
 
 
-  
+   body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #0a2c3d;
+    }
+
+    .stats-section {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .stats-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+      font-weight: 600;
+    }
+
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .stat-box {
+      flex: 1 1 200px;
+      max-width: 250px;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      color: #43b02a;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+
+
+
+
+
+
+.quote-card {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .quote:hover {
+      color: #1d4ed8;
+      transform: scale(1.01);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .quote-mark {
+      color: #22c55e;
+      font-size: 3rem;
+    }
+
+
+
+
+
+
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: slideInLeft 1s ease-out;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .text-content {
+      animation: slideInRight 1s ease-out;
+    }
+    .text-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .activity {
+      background-color: #fff;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .activity:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .activity-icon {
+      color: #22c55e;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .activity-title {
+      font-weight: bold;
+      margin: 0 0 0.25rem;
+    }
+    @keyframes slideInLeft {
+      from {opacity: 0; transform: translateX(-50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+    @keyframes slideInRight {
+      from {opacity: 0; transform: translateX(50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+
+
+
+
+
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+    }
+    .subscribe-section {
+      background: linear-gradient(135deg, #32cd32, #28a745);
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-radius: 1rem;
+      max-width: 800px;
+      margin: 3rem auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease-out;
+    }
+    .subscribe-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .subscribe-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .form-container input[type="email"] {
+      padding: 0.8rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      width: 250px;
+      max-width: 90%;
+      font-size: 1rem;
+      outline: none;
+    }
+    .form-container button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      color: #28a745;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .form-container button:hover {
+      background-color: #f4f4f4;
+      color: #228b22;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 480px) {
+      .subscribe-section h2 {
+        font-size: 1.5rem;
+      }
+      .form-container {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .form-container input[type="email"], .form-container button {
+        width: 100%;
+      }
+    }
+
+
+
+
+
+
+     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+    footer {
+      background-color: #e8fbe8;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+    }
+    .footer-column {
+      flex: 1 1 250px;
+      text-align: left;
+    }
+    .footer-column h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      color: #1d4d1d;
+    }
+    .footer-column p {
+      margin: 0.3rem 0;
+      color: #333;
+    }
+    .footer-bottom {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .footer-nav {
+      margin-top: 1rem;
+    }
+    .footer-nav a {
+      margin: 0 1rem;
+      color: #1d4d1d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #1d4d1d;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #32cd32;
+    }
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-column {
+        text-align: center;
+      }
+    }

@@ -6,6 +6,9 @@
   <title>Responsive Navbar</title>
   <link rel="stylesheet" href="home.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -102,8 +105,261 @@
 
 
 
+ <section class="stats-section">
+    <h2>Champion School at a Glance</h2>
+    <div class="stats-container">
+      <div class="stat-box">
+        <div class="stat-number" data-target="7000">0</div>
+        <div class="stat-label">Current Enrollments</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="450">0</div>
+        <div class="stat-label">Qualified Staff</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="80">0</div>
+        <div class="stat-label">Clubs & Activities</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="2000000">0</div>
+        <div class="stat-label">Alumni</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200; // lower = faster
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText.replace(/[^0-9]/g, '');
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment > target ? target : count + increment;
+          setTimeout(updateCount, 20);
+        } else {
+          // Format based on number size
+          if (target >= 1000000) {
+            counter.innerText = Math.floor(target / 1000000) + 'M+';
+          } else if (target >= 1000) {
+            counter.innerText = Math.floor(target / 1000) + 'K+';
+          } else {
+            counter.innerText = target + '+';
+          }
+        }
+      };
+
+      updateCount();
+    });
+  </script>
 
 
+
+
+
+
+<body class="bg-gray-50 w-full h-screen flex items-center justify-center">
+
+  <div class="w-full h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-5xl bg-white shadow-2xl rounded-2xl p-10 quote-card text-center">
+      <div class="quote-mark mb-4">“</div>
+      <p class="text-gray-800 text-xl md:text-3xl font-serif italic quote transition duration-300">
+        We aim at inspiring our students to dream more, learn more, do more, and become more in their respective journeys of life.
+      </p>
+      <p class="mt-6 text-gray-600 text-lg font-medium">
+        Muhammad <span class="italic font-semibold">Naseem Lehri</span> — Secretary
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <body class="bg-gray-50 text-gray-900">
+
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="flex flex-col md:flex-row md:justify-between items-start mb-12">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-4xl font-bold leading-tight mb-2">Curriculum<br>Overview</h2>
+      </div>
+      <div class="md:w-1/2 md:pl-12 border-l-4 border-green-400 pl-4">
+        <p class="text-lg">
+          The Tameer-i-Nau Trust aims at offering all our students a broad and balanced curriculum that provides rewarding and stimulating activities to prepare them for the best social and cultural life.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
+        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34" alt="Computer Science" class="w-full h-64 object-cover rounded-t-xl">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Computer Science</h3>
+          <p class="text-gray-600 text-sm">Hands-on experience with the latest programming languages and technology.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Fine Arts" class="w-full h-64 object-cover rounded-t-xl">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Fine Arts</h3>
+          <p class="text-gray-600 text-sm">Giving wings to the artists who’d like to take it up as a career or just a hobby.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Humanities" class="w-full h-64 object-cover rounded-t-xl">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Humanities</h3>
+          <p class="text-gray-600 text-sm">The study of ancient and modern languages, philosophy, history, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="max-w-7xl mx-auto px-6 py-16">
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- Science -->
+    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
+      <img src="https://tameerinau.edu.pk/wp-content/uploads/2021/05/school-template-curriculum-img-4.jpg" alt="Science" class="w-full h-64 object-cover rounded-t-xl">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Science</h3>
+        <p class="text-gray-600 text-sm">
+          The study that encourages scientific reasoning, discoveries and inventions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mathematics -->
+    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
+      <img src="https://tameerinau.edu.pk/wp-content/uploads/2021/05/school-template-curriculum-img-5.jpg" alt="Mathematics" class="w-full h-64 object-cover rounded-t-xl">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Mathematics</h3>
+        <p class="text-gray-600 text-sm">
+          Understanding the game of numbers and logic to solve real-world problems.
+        </p>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
+      <img src="https://tameerinau.edu.pk/wp-content/uploads/2021/05/school-template-curriculum-img-6.jpg" alt="Languages" class="w-full h-64 object-cover rounded-t-xl">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Languages</h3>
+        <p class="text-gray-600 text-sm">
+          Learning more modes of communication from different parts of the world.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<div class="container">
+  <!-- Image -->
+  <div class="image-container">
+    <img src="https://tameerinau.edu.pk/wp-content/uploads/2021/05/school-template-activities-img.jpg" alt="Basketball Players">
+  </div>
+
+  <!-- Text -->
+  <div class="text-content">
+    <h2>Our Co-curricular Activities</h2>
+    <div class="activity">
+      <div class="activity-icon"><i class="fas fa-check-circle"></i></div>
+      <div>
+        <div class="activity-title">Athletics</div>
+        <div>Our students are passionate about sports and athletics and have the freedom to choose the one they like and wish to take up.</div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="activity-icon"><i class="fas fa-check-circle"></i></div>
+      <div>
+        <div class="activity-title">In-house Publications</div>
+        <div>We have several writers who are encouraged to come up with creations that are regularly published in our in-house magazines.</div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="activity-icon"><i class="fas fa-check-circle"></i></div>
+      <div>
+        <div class="activity-title">Performing Arts & Music</div>
+        <div>With professionals on board, we take pride in training our students in art forms like dance, drama, painting and more.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="subscribe-section">
+  <h2>Wish to know more about admissions and updates?</h2>
+  <p>Subscribe now!</p>
+  <form class="form-container">
+    <input type="email" placeholder="Email Address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+
+
+
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Tameer-i-Nau Trust Balochistan Quetta</h3>
+      <p>Sharh-e-Gulistan Opposite Police Line Quetta Cantt</p>
+    </div>
+    <div class="footer-column">
+      <h3>Head Office</h3>
+      <p>081-2825432</p>
+      <p>9:00 a.m. – 5:00 p.m.</p>
+    </div>
+    <div class="footer-column">
+      <h3>For Info</h3>
+      <p>081-2832102</p>
+      <p>info@tameerinau.edu.pk</p>
+    </div>
+  </div>
+  
+  <div class="footer-nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Academics</a>
+    <a href="#">Activities</a>
+    <a href="#">Contact</a>
+    <a href="#">Alumni Registration</a>
+  </div>
+  
+  <div class="social-icons">
+    <a href="#"><span>&#x1F426;</span></a> <!-- Twitter (replace with icons) -->
+    <a href="#"><span>&#x1F4F7;</span></a> <!-- Facebook -->
+    <a href="#"><span>&#x1F4F1;</span></a> <!-- Instagram -->
+  </div>
+  
+  <div class="footer-bottom">
+    Copyright &copy; 2025 Tameer-i-Nau Trust Balochistan Quetta | Powered by  <B>KAMRAN KHAN NOORZAI</B> and Tameer-i-Nau Trust Balochistan Quetta
+  </div>
+</footer>
 
 
 
